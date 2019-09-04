@@ -16,8 +16,8 @@
               <a class="navbar-brand" href="index.jsp">Minha Loja</a>
             </div>
             <ul class="nav navbar-nav">
-              <li class="active"><a href="index.jsp">Ofertas</a></li>
-              <li><a href="produtos.jsp">Produtos</a></li>
+              <li><a href="index.jsp">Ofertas</a></li>
+              <li class="active"><a href="produtos.jsp">Produtos</a></li>
               <li><a href="sobre.jsp">Sobre</a></li>
             </ul>
 

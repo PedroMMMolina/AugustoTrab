@@ -1,0 +1,26 @@
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Meu Estoque</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+   </head>
+   <body>
+      <h1>Entrar no Sistema</h1>
+      <form action="Login" method="post">
+         <div class="form-group">
+             <label for="exampleInputEmail1">Email:</label>
+             <input name="senha" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+         </div>
+         <div class="form-group">
+             <label for="exampleInputPassword1">Senha:</label>
+             <input name="senha" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+         </div>
+         <button type="submit" class="btn btn-default">Enviar</button>
+      </form>
+
+      <script src="js/bootstrap.min.js" type="text/javascript"></script>
+   </body>
+</html>
