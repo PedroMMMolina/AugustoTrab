@@ -16,9 +16,9 @@
               <a class="navbar-brand" href="index.jsp">Minha Loja</a>
             </div>
             <ul class="nav navbar-nav">
-              <li class="active"><a href="index.jsp">Ofertas</a></li>
+              <li><a href="index.jsp">Ofertas</a></li>
               <li><a href="produtos.jsp">Produtos</a></li>
-              <li><a href="sobre.jsp">Sobre</a></li>
+              <li class="active"><a href="sobre.jsp">Sobre</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -29,27 +29,9 @@
           </div>
 
         </nav>
-         <div class="container">
-       <h1>Ofertas!</h1>
 
-        <%
-            for(int i=0; i<Produto.getLista().size(); i++){
-               Produto p = Produto.getLista().get(i);
+        <h1>Site feito com muito amor para tirar um Azão na matéria do Augustão!</h1>
 
-               if(i%4==0) { %>
-               <div class="row">
-               <% }
-
-
-                out.println("<pre> "+ p.getDescricao() +" </pre>");
-
-                if(i%4==0) { %>
-               </div>
-               <% }
-            }
-
-        %>
-         </div>
         <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
