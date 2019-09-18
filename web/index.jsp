@@ -7,48 +7,35 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Minha Loja</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/ofertas.css">
     </head>
     <body>
 
-        <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="index.jsp">Minha Loja</a>
-            </div>
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="index.jsp">Ofertas</a></li>
-              <li><a href="produtos.jsp">Produtos</a></li>
-              <li><a href="sobre.jsp">Sobre</a></li>
-            </ul>
+       <jsp:include page="menu.jsp">
+          <jsp:param name="item" value="ofertas" />
+       </jsp:include>
 
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="login.jsp">Entrar</a></li>
+       <div class="container">
+         <h1>Ofertas!</h1>
 
-            </ul>
-
-          </div>
-
-        </nav>
-         <div class="container">
-       <h1>Ofertas!</h1>
-
+         <div class="ofertas">
         <%
             for(int i=0; i<Produto.getLista().size(); i++){
                Produto p = Produto.getLista().get(i);
 
-               if(i%4==0) { %>
-               <div class="row">
-               <% }
-
-
-                out.println("<pre> "+ p.getDescricao() +" </pre>");
-
-                if(i%4==0) { %>
+               if(p.isOferta()){
+               %>
+               <div>
+                  <h5> <%= p.getDescricao()%> </h5>
+                  <p>  <%= p.getPreco()%> </p>
                </div>
-               <% }
+               <%
             }
 
+         }
         %>
+         </div>
+
          </div>
         <script src="js/bootstrap.min.js"></script>
     </body>
