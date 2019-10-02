@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelos.Usuario;
 
 public class Login extends HttpServlet {
 
@@ -15,8 +16,7 @@ public class Login extends HttpServlet {
       String email = request.getParameter("email");
       String senha = request.getParameter("senha");
       //login adm para cadastrar produtos
-      if(email.equals("adm@ifpr.edu.br") && senha.equals("admin")){
-         request.getSession().setAttribute("logado", true);
+      if(Usuario.login(email,senha)){
          //entra pagina de produtos
          response.sendRedirect("produtos.jsp");
       }else{
