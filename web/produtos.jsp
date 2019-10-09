@@ -13,12 +13,12 @@
         <jsp:include page="menu.jsp">
           <jsp:param name="item" value="produtos" />
        </jsp:include>
-       
+
        <div class="container">
         <h1>Produtos!</h1>
 
         <%
-           boolean logado=false;
+           boolean logado= false;
 
            if(session != null && session.getAttribute("logado") != null){
                 logado = (boolean)session.getAttribute("logado");

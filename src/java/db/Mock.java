@@ -35,6 +35,11 @@ public class Mock {
          gerente.setNome("Pedro Molina");
          lista.add(gerente);
 
+         Usuario deus = new Usuario();
+         deus.setEmail("ronaldomon02@ifpr.edu.br");
+         deus.setSenha("blitzcrank");
+         deus.setNome("Leandro Martin Veiga");
+         lista.add(deus);
       }
    }
 

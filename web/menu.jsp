@@ -13,6 +13,7 @@
    String c_ofertas = item.equals("ofertas")? active : "";
    String c_produtos = item.equals("produtos")? active : "";
    String c_sobre = item.equals("sobre")? active : "";
+   String c_usuarios = item.equals("usuarios")? active : "";
 %>
 <nav class="navbar navbar-inverse">
           <div class="container-fluid">
@@ -23,6 +24,7 @@
               <li <%=c_ofertas %> ><a href="index.jsp">Ofertas    </a></li>
               <li <%=c_produtos%> ><a href="produtos.jsp">Produtos</a></li>
               <li <%=c_sobre   %> ><a href="sobre.jsp">Sobre      </a></li>
+              <li <%=c_usuarios %> ><a href="usuarios.jsp"> Usuarios </a> </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

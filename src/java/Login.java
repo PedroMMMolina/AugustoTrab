@@ -18,6 +18,7 @@ public class Login extends HttpServlet {
       //login adm para cadastrar produtos
       if(Usuario.login(email,senha)){
          //entra pagina de produtos
+         request.getSession().setAttribute("logado", true);
          response.sendRedirect("produtos.jsp");
       }else{
          //volta para a tela de login
